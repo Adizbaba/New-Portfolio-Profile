@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Adiz Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" href="assets/img/Favicon.ico" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+
+  <style>
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: linear-gradient(to right, #021e16, #053e2d, #021e16) !important;
+      pointer-events: none;
+    }
+
+    .section {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes gradient-shift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .hero {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      min-height: 100vh;
+      color: white;
+      text-align: left;
+      background: linear-gradient(to right, #021e16, #053e2d, #021e16);
+      overflow: hidden;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      gap: 2rem;
+      padding-top: 4rem;
+    }
+
+    .hero-text {
+      flex: 0 1 50%;
+      padding: 2rem;
+    }
+
+    .hero-text h1 {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .hero-text .highlight {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .stat-item {
+      text-align: left;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #4ade80;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 1.5rem 4rem;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .hero-cta:hover {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #4ade80;
+    }
+
+    .hero-image {
+      flex: 0 1 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .hero-image img {
+      max-width: 120%;
+      height: auto;
+      object-fit: contain;
+      margin-top: -2rem;
+      margin-right: -10%;
+    }
+
+    @media (max-width: 1200px) {
+      .hero-image img {
+        max-width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        padding-top: 2rem;
+      }
+
+      .hero-text,
+      .hero-image {
+        flex: 0 1 100%;
+      }
+
+      .hero-image {
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .hero-image img {
+        max-width: 80%;
+        margin: 0;
+      }
+
+      .hero-stats {
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+    }
+
+    .expertise-icons {
+      position: fixed;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .expertise-icons i {
+      font-size: 2rem;
+      color: #4ade80;
+    }
+
+    /* Nav menu styles */
+    .navmenu a {
+      color: #021e16;
+    }
+
+    .navmenu a i {
+      color: white;
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .navmenu a:hover,
+    .navmenu a:focus,
+    .navmenu a.active {
+      color: #021e16;
+      background-color: #4ade80;
+    }
+
+    .navmenu a:hover i,
+    .navmenu a:focus i,
+    .navmenu a.active i {
+      color: #021e16;
+    }
+
+    .typed-text {
+      background: rgba(59, 85, 31, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 15px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #021e16;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    @keyframes typed-text {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Portfolio Section Styles */
+    .portfolio {
+      padding: 8rem 0;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(2, 30, 22, 0.1) 0%, rgba(74, 222, 128, 0.05) 100%);
+    }
+
+    .portfolio-container {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 4rem 6rem;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+      margin: 0 auto;
+      max-width: 1400px;
+    }
+
+    /* Portfolio Filters */
+    .portfolio-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .filter-btn {
+      background: rgba(74, 222, 128, 0.1);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #4ade80;
+      color: #021e16;
+      transform: translateY(-2px);
+    }
+
+    /* Portfolio Grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Portfolio Card */
+    .portfolio-card {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-color: rgba(74, 222, 128, 0.2);
+    }
+
+    .portfolio-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+    }
+
+    .portfolio-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-card:hover .portfolio-image img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 30, 22, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .portfolio-card:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .portfolio-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #4ade80;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-link:hover {
+      background: #4ade80;
+      color: #021e16;
+      transform: translateY(-3px);
+    }
+
+    /* Portfolio Content */
+    .portfolio-content {
+      padding: 1.5rem;
+    }
+
+    .portfolio-content h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .portfolio-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.5rem;
+    }
+
+    .portfolio-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .tech-tag {
+      background: rgba(74, 222, 128, 0.1);
+      color: #4ade80;
+      padding: 0.4rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid rgba(74, 222, 128, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .portfolio-container {
+        padding: 3rem 4rem;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio {
+        padding: 6rem 0;
+      }
+
+      .portfolio-container {
+        padding: 2rem;
+        margin: 0 1rem;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-filters {
+        gap: 0.5rem;
+      }
+
+      .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Services Section Styles */
+    .services {
+      padding: 8rem 0;
+      background: linear-gradient(135deg, rgba(2, 30, 22, 0.08) 0%, rgba(74, 222, 128, 0.04) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .services-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+      padding: 4rem 6rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 2.5rem 2rem 2rem 2rem;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(.4, 2, .6, 1);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.7s forwards;
+    }
+
+    .service-card[data-aos] {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 12px 32px 0 rgba(74, 222, 128, 0.12);
+      border-color: #4ade80;
+      transform: translateY(-8px) scale(1.03);
+    }
+
+    .service-icon {
+      font-size: 2.8rem;
+      color: #4ade80;
+      background: rgba(74, 222, 128, 0.10);
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+      box-shadow: 0 2px 8px 0 rgba(74, 222, 128, 0.08);
+      transition: background 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+      background: #4ade80;
+      color: #021e16;
+    }
+
+    .service-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #4ade80;
+      letter-spacing: 0.01em;
+    }
+
+    .service-desc {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.7;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+
+    .services-cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .services-btn {
+      display: inline-block;
+      background: #4ade80;
+      color: #021e16;
+      border-radius: 10px;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 2px 8px 0 rgba(74, 222, 128, 0.10);
+      border: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .services-btn:hover {
+      background: transparent;
+      color: #4ade80;
+      border-color: #4ade80;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 992px) {
+      .services-container {
+        padding: 3rem 2rem;
+      }
+
+      .services-grid {
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        padding: 6rem 0;
+      }
+
+      .services-container {
+        padding: 1.5rem 0.5rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+
+      .service-card {
+        padding: 2rem 1rem 1.5rem 1rem;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glass-footer {
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      box-shadow: 0 -4px 32px 0 rgba(31, 38, 135, 0.08);
+      padding: 0;
+      margin-top: 4rem;
+      color: var(--text-main);
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 2rem 1.5rem 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    .footer-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: white;
+    }
+
+    .footer-tagline {
+      font-size: 1rem;
+      color: white;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-social h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: white;
+    }
+
+    .footer-links ul,
+    .footer-contact ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links ul li,
+    .footer-contact ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .footer-links ul li a,
+    .footer-contact ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links ul li a:hover,
+    .footer-contact ul li a:hover {
+      color: white;
+    }
+
+    .footer-contact ul li i {
+      color: white;
+      margin-right: 0.5rem;
+      font-size: 1.1rem;
+      vertical-align: middle;
+    }
+
+    .footer-social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.2rem;
+    }
+
+    .footer-social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      background: rgba(74, 222, 128, 0.10);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .footer-social-icons a:hover {
+      background: #4ade80;
+      color: black;
+      transform: translateY(-3px) scale(1.08);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.2rem;
+      font-size: 1rem;
+      color: white;
+    }
+
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-container {
+        padding: 2rem 0.5rem 1rem 0.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .footer-about,
+      .footer-links,
+      .footer-contact,
+      .footer-social {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footer-social-icons {
+        justify-content: center;
+      }
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      pointer-events: auto;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+
+    .theme-toggle i {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/ -->
+</head>
+
+<body class="index-page">
+  <div id="particles-js"></div>
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- Theme Toggle Button -->
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container" data-aos="zoom-out">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>I'm Ibrahim Muritala</h1>
+            <div class="typing-box">
+              <span class="static-text">I'm a </span>
+              <span class="typing-text" id="typing"></span>
+            </div><br>
+            <a href="#contact" class="hero-cta">Get in touch →</a>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Review</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">1+</div>
+                <div class="stat-label">Award Winning</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/assets/img/Vector1.png" alt="Ibrahim Muritala">
+          </div>
+        </div>
+      </div>
+      <div class="expertise-icons">
+        <i class="bi bi-filetype-html"></i>
+        <i class="bi bi-filetype-css"></i>
+        <i class="bi bi-filetype-js"></i>
+        <i class="bi bi-database"></i>
+        <i class="bi bi-bootstrap"></i>
+        <i class="fa-brands fa-figma"></i>
+        <i class="fa-brands fa-react"></i>
+        <i class="fa-brands fa-node-js"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container about-container" data-aos="fade-up">
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+            <h2>About Me</h2>
+            <p>I am a passionate Full Stack Developer with expertise in creating beautiful, functional, and
+              user-centered digital experiences. With 3+ years of experience in web development, I combine technical
+              expertise with creative problem-solving to deliver exceptional results.</p>
+            <p>My approach to development focuses on writing clean, efficient code while ensuring optimal user
+              experience. I stay current with the latest technologies and best practices in web development.</p>
+
+            <div class="about-stats">
+              <div class="about-stat-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="about-stat-number">20+</div>
+                <div class="about-stat-label">Projects Completed</div>
+              </div>
+              <div class="about-stat-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="about-stat-number">3+</div>
+                <div class="about-stat-label">Years Experience</div>
+              </div>
+              <div class="about-stat-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="about-stat-number">15+</div>
+                <div class="about-stat-label">Happy Clients</div>
+              </div>
+            </div>
+
+            <div class="about-cta">
+              <a href="/assets/new-resume.pdf" class="resume-btn" data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-download"></i>
+                Download Resume
+              </a>
+            </div>
+
+            <div class="tech-stack" data-aos="fade-up" data-aos-delay="600">
+              <i class="tech-icon fab fa-html5"></i>
+              <i class="tech-icon fab fa-css3-alt"></i>
+              <i class="tech-icon fab fa-js"></i>
+              <i class="tech-icon fab fa-react"></i>
+              <i class="tech-icon fab fa-node-js"></i>
+              <i class="tech-icon fab fa-git-alt"></i>
+              <i class="tech-icon fab fa-github"></i>
+              <i class="tech-icon fab fa-figma"></i>
+            </div>
+          </div>
+
+          <div class="about-image" data-aos="fade-left" data-aos-delay="200">
+            <img src="assets/img/muri.png" alt="Ibrahim Muritala">
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-emoji-smile"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-journal-richtext"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="21" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-headset"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="1063" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-people"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="skills-container" data-aos="fade-up">
+        <div class="skills-header">
+          <h2>My Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="100" data-level="expert">
+            <div class="skill-tooltip">Proficient in modern HTML5 and CSS3, including Flexbox, Grid, and responsive
+              design principles</div>
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="skill-info">
+                <div class="skill-name-wrapper">
+                  <div class="skill-name">HTML & CSS</div>
+                  <div class="skill-level">Expert</div>
+                </div>
+                <div class="skill-percentage">95%</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar" style="--progress: 95%"></div>
+            </div>
+            <div class="skill-highlight"></div>
+          </div>
+
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="200" data-level="expert">
+            <div class="skill-tooltip">Strong understanding of JavaScript ES6+, async programming, and DOM manipulation
+            </div>
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fab fa-js"></i>
+              </div>
+              <div class="skill-info">
+                <div class="skill-name-wrapper">
+                  <div class="skill-name">JavaScript</div>
+                  <div class="skill-level">Expert</div>
+                </div>
+                <div class="skill-percentage">90%</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar" style="--progress: 90%"></div>
+            </div>
+            <div class="skill-highlight"></div>
+          </div>
+
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-tooltip">Experience with React.js, including hooks, context API, and state management
+            </div>
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fab fa-react"></i>
+              </div>
+              <div class="skill-info">
+                <div class="skill-name-wrapper">
+                  <div class="skill-name">React</div>
+                  <div class="skill-level">Advanced</div>
+                </div>
+                <div class="skill-percentage">85%</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar" style="--progress: 85%"></div>
+            </div>
+            <div class="skill-highlight"></div>
+          </div>
+
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-tooltip">Skilled in database design, SQL queries, and data modeling with PostgreSQL</div>
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="skill-info">
+                <div class="skill-name-wrapper">
+                  <div class="skill-name">PostgreSQL</div>
+                  <div class="skill-level">Intermediate</div>
+                </div>
+                <div class="skill-percentage">75%</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar" style="--progress: 75%"></div>
+            </div>
+            <div class="skill-highlight"></div>
+          </div>
+
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-tooltip">Proficient in UI/UX design, prototyping, and collaboration using Figma</div>
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fab fa-figma"></i>
+              </div>
+              <div class="skill-info">
+                <div class="skill-name-wrapper">
+                  <div class="skill-name">Figma</div>
+                  <div class="skill-level">Advanced</div>
+                </div>
+                <div class="skill-percentage">80%</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar" style="--progress: 80%"></div>
+            </div>
+            <div class="skill-highlight"></div>
+          </div>
+
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="skill-tooltip">Experience with image editing, design composition, and digital art</div>
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <div class="skill-info">
+                <div class="skill-name-wrapper">
+                  <div class="skill-name">Adobe Photoshop</div>
+                  <div class="skill-level">Intermediate</div>
+                </div>
+                <div class="skill-percentage">70%</div>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar" style="--progress: 70%"></div>
+            </div>
+            <div class="skill-highlight"></div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+
+      <div class="container resume-container" data-aos="fade-up">
+        <div class="resume-wrapper">
+          <!-- Summary Section -->
+          <div class="resume-section summary-section" data-aos="fade-up" data-aos-delay="100">
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Resume</h2>
+              <p>My Professional Journey and Qualifications</p>
+            </div>
+            <div class="section-header">
+              <i class="bi bi-person-badge"></i>
+              <h3 class="resume-title">Summary</h3>
+            </div>
+            <div class="resume-item summary-card">
+              <div class="summary-content">
+                <h4>Full Stack Developer | Creative Problem Solver</h4>
+                <div class="summary-text">
+                  <p>Highly motivated and results-oriented Full Stack Developer with over three years of hands-on
+                    experience in building dynamic web applications and delivering visually engaging graphic designs.
+                  </p>
+                  <p>Proficient in a robust tech stack including HTML, CSS, JavaScript, React, Figma, and PostgreSQL. I
+                    specialize in crafting user-centric, responsive, and high-quality solutions, while continuously
+                    advancing my skills through learning and practical application.</p>
+                </div>
+                <div class="tech-stack">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Figma</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Section -->
+          <div class="resume-section education-section" data-aos="fade-up" data-aos-delay="200">
+            <div class="section-header">
+              <i class="bi bi-mortarboard"></i>
+              <h3 class="resume-title">Education & Certifications</h3>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">2023 - 2024</div>
+                  <h4>Diploma in Software Engineering</h4>
+                  <p class="institution">APTECH</p>
+                  <div class="timeline-dot"></div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">March 2024</div>
+                  <h4>Figma UI/UX Design Essentials</h4>
+                  <p class="institution">Udemy</p>
+                  <div class="timeline-dot"></div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <div class="timeline-date">2015 - 2019</div>
+                  <h4>BSc in Business Administration</h4>
+                  <p class="institution">Federal University of Technology, Akure</p>
+                  <div class="timeline-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Section -->
+          <div class="resume-section experience-section" data-aos="fade-up" data-aos-delay="300">
+            <div class="section-header">
+              <i class="bi bi-briefcase"></i>
+              <h3 class="resume-title">Professional Experience</h3>
+            </div>
+            <div class="experience-grid">
+              <div class="experience-card">
+                <div class="experience-header">
+                  <h4>Freelance Full Stack Developer</h4>
+                  <div class="experience-meta">
+                    <span class="company">Self-Employed</span>
+                    <span class="duration">May 2023 - Present</span>
+                  </div>
+                </div>
+                <ul class="experience-list">
+                  <li>Built responsive websites and apps using HTML, CSS, JavaScript, React, and Bootstrap</li>
+                  <li>Designed clean UIs with Figma; implemented user-friendly, accessible interfaces</li>
+                  <li>Integrated PostgreSQL databases and delivered client-focused web solutions</li>
+                </ul>
+                <div class="experience-footer">
+                  <span class="role-tag">Full Stack</span>
+                  <span class="role-tag">Frontend</span>
+                  <span class="role-tag">UI/UX</span>
+                </div>
+              </div>
+
+              <div class="experience-card">
+                <div class="experience-header">
+                  <h4>Accounting Officer II</h4>
+                  <div class="experience-meta">
+                    <span class="company">Adeniyi Johnson & Co</span>
+                    <span class="duration">June 2022 - April 2024</span>
+                  </div>
+                </div>
+                <ul class="experience-list">
+                  <li>Reviewed financial reports and ensured compliance</li>
+                  <li>Prepared audit documentation and implemented recommendations</li>
+                  <li>Maintained ledgers, bank reconciliations, and account accuracy</li>
+                </ul>
+                <div class="experience-footer">
+                  <span class="role-tag">Finance</span>
+                  <span class="role-tag">Accounting</span>
+                  <span class="role-tag">Compliance</span>
+                </div>
+              </div>
+
+              <div class="experience-card">
+                <div class="experience-header">
+                  <h4>Finance Assistant (Contract)</h4>
+                  <div class="experience-meta">
+                    <span class="company">Nigeria Maritime Administrative & Safety Agency</span>
+                    <span class="duration">Nov 2020 - Oct 2022</span>
+                  </div>
+                </div>
+                <ul class="experience-list">
+                  <li>Managed files, vouchers, and staff logistics</li>
+                  <li>Coordinated office supply systems and document dispatching</li>
+                </ul>
+                <div class="experience-footer">
+                  <span class="role-tag">Administration</span>
+                  <span class="role-tag">Logistics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-cta" data-aos="fade-up" data-aos-delay="400">
+          <a href="/assets/new-resume.pdf" class="download-resume">
+            <i class="fas fa-download"></i>
+            Download Resume PDF
+          </a>
+        </div>
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Explore my latest projects and creative work</p>
+      </div>
+
+      <div class="container portfolio-container" data-aos="fade-up">
+        <!-- Portfolio Filters -->
+        <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
+          <button class="filter-btn active" data-filter="*">All Projects</button>
+          <button class="filter-btn" data-filter=".frontend">Frontend</button>
+          <button class="filter-btn" data-filter=".fullstack">Fullstack</button>
+          <button class="filter-btn" data-filter=".ui-ux">UI/UX</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+          <!-- Project 1 -->
+          <div class="portfolio-item fullstack" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/img/auction.png" alt="Project 1">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link" title="View Demo">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="portfolio-link" title="View Code">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <h3>Auction/Declutter Platform</h3>
+                <p>A modern auction solution with real-time bidding management and secure payment processing.</p>
+                <div class="portfolio-tech">
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Supabase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="portfolio-item frontend" data-aos="fade-up" data-aos-delay="300">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/img/rock.png" alt="Project 2">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-links">
+                    <a href="https://adizbaba.github.io/rocknpaper/" class="portfolio-link" title="View Demo">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="https://adizbaba.github.io/rocknpaper/" class="portfolio-link" title="View Code">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <h3>Rock Paper Scissors Game</h3>
+                <p>A collaborative task management application with real-time updates and team features.</p>
+                <div class="portfolio-tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="portfolio-item frontend" data-aos="fade-up" data-aos-delay="400">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/img/wedding.png" alt="Project 3">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-links">
+                    <a href="https://withjoy.com/omolade-and-tomisona/welcome" class="portfolio-link" title="View Demo">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="https://withjoy.com/omolade-and-tomisona/welcome" class="portfolio-link" title="View Code">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <h3>Wedding Website</h3>
+                <p>A modern wedding website with RSVP and photo gallery features.</p>
+                <div class="portfolio-tech">
+                  <span class="tech-tag">withjoy.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="portfolio-item ui-ux" data-aos="fade-up" data-aos-delay="400">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/img/figma.png" alt="Project 4">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-links">
+                    <a href="#" class="portfolio-link" title="View Demo">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="portfolio-link" title="View Code">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <h3>Portfolio Prototype</h3>
+                <p>A modern portfolio prototype with responsive design and smooth animations.</p>
+                <div class="portfolio-tech">
+                  <span class="tech-tag">Figma</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="portfolio-item frontend" data-aos="fade-up" data-aos-delay="400">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img src="assets/img/wrapper.png" alt="Project 5">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-links">
+                    <a href="https://flyernow.org/" class="portfolio-link" title="View Demo">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="portfolio-link" title="View Code">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <h3>Flyernow Company Website</h3>
+                <p>A wrapper business based in the United States, a website with responsive design and smooth
+                  animations.</p>
+                <div class="portfolio-tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>What I Can Do For You</p>
+      </div>
+      <div class="container services-container" data-aos="fade-up">
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h3 class="service-title">Custom Website Development</h3>
+            <p class="service-desc">I build responsive, high-performance websites tailored to your business or personal
+              brand using the latest technologies
+              like React, JavaScript, and modern CSS frameworks. Whether it's a landing page, portfolio, or a
+              full-featured web app,
+              I've got you covered.</p>
+          </div>
+          <!-- Service 2 -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <h3 class="service-title">Full-Stack Web Development</h3>
+            <p class="service-desc">Need something more dynamic? I can develop powerful, scalable web apps using React
+              on the
+              front end and PostgreSQL or
+              other backend stacks, bringing functionality and interactivity to your digital solutions.</p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="bi bi-palette"></i>
+            </div>
+            <h3 class="service-title">UI/UX Design & Prototyping</h3>
+            <p class="service-desc">I craft intuitive and engaging user experiences with a strong focus on design
+              systems,
+              accessibility, and user flow.
+              Using tools like Adobe Photoshop and Figma, I deliver wireframes, mockups, and interactive prototypes that
+              turn
+              ideas
+              into beautiful interfaces.
+            </p>
+          </div>
+          <!-- Service 4 -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <i class="bi bi-bar-chart"></i>
+            </div>
+            <h3 class="service-title">Website Redesign & Modernization</h3>
+            <p class="service-desc">Outdated site? I specialize in redesigning old or underperforming websites to give
+              them a fresh, modern look — fully
+              responsive, optimized for performance, and aligned with today's best UX practices.</p>
+          </div>
+        </div>
+        <div class="services-cta" data-aos="fade-up" data-aos-delay="500">
+          <a href="#contact" class="services-btn">Let's Work Together</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>What Clients Say</h2>
+        <p>Real feedback from people I've worked with</p>
+      </div>
+      <div class="container testimonials-container" data-aos="fade-up">
+        <div class="swiper testimonials-swiper">
+          <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide testimonial-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="testimonial-avatar">
+                <img src="assets/img/testimonials/testimonials-1.jpg" alt="Saul Goodman"
+                  onerror="this.src='https://ui-avatars.com/api/?name=Saul+Goodman&background=4ade80&color=021e16'">
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-quote">"Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
+                  suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at
+                  semper."</p>
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-meta">
+                  <span class="testimonial-name">Saul Goodman</span>
+                  <span class="testimonial-role">CEO & Founder</span>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide testimonial-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="testimonial-avatar">
+                <img src="assets/img/testimonials/Sheriff.jpg" alt="Sheriff Ademola"
+                  onerror="this.src='https://ui-avatars.com/api/?name=Sara+Wilsson&background=4ade80&color=021e16'">
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-quote">"Flyernow.org gave my car wrap business a serious upgrade. The design is
+                  clean, fast, and makes it super easy for
+                  customers to understand our services. I've already seen more inquiries come in since launching the
+                  site!"</p>
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-meta">
+                  <span class="testimonial-name">Sheriff Ademola</span>
+                  <span class="testimonial-role">Manager, Flyernow.org</span>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide testimonial-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="testimonial-avatar">
+                <img src="assets/img/bridee.JPG" alt="Jena Karlis"
+                  onerror="this.src='https://ui-avatars.com/api/?name=Jena+Karlis&background=4ade80&color=021e16'">
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-quote">"Our wedding website was absolutely stunning—elegant, easy to use, and
+                  beautifully captured our story. Our guests loved
+                  the RSVP feature and photo gallery. Thank you for making our big day feel even more special!"</p>
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-meta">
+                  <span class="testimonial-name">Omolade & Tomisona</span>
+                  <span class="testimonial-role">Bride & Groom</span>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="swiper-slide testimonial-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="testimonial-avatar">
+                <img src="assets/img/testimonials/testimonials-4.jpg" alt="John Larson"
+                  onerror="this.src='https://ui-avatars.com/api/?name=John+Larson&background=4ade80&color=021e16'">
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-quote">"Ibrahim's expertise in web development, responsive design, and search
+                  engine optimization helped us create an innovative
+                  and engaging online platform for our customers. His attention to detail and commitment to quality were
+                  much appreciated."</p>
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-meta">
+                  <span class="testimonial-name">Adeniyi Johnson</span>
+                  <span class="testimonial-role">Tax Consultant</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Let's Connect</h2>
+        <p>Ready to start a project or just want to say hi? Reach out below!</p>
+      </div>
+      <div class="container contact-container" data-aos="fade-up">
+        <div class="contact-grid">
+          <!-- Contact Info Sidebar -->
+          <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+            <div class="info-block">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:adizbaba@yahoo.com">adizbaba@yahoo.com</a></p>
+              </div>
+            </div>
+            <div class="info-block">
+              <i class="bi bi-telephone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p><a href="tel:+2349134714773">+2349134714773</a></p>
+              </div>
+            </div>
+            <div class="info-block">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Lagos, Nigeria</p>
+              </div>
+            </div>
+            <div class="info-block social-block">
+              <h4>Connect</h4>
+              <div class="social-icons">
+                <a href="#" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="#" target="_blank" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm" novalidate data-aos="fade-left" data-aos-delay="200">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your Name">
+              <div class="form-error" id="nameError"></div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="Your Email">
+              <div class="form-error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
+              <div class="form-error" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+              <div class="form-error" id="messageError"></div>
+            </div>
+            <button type="submit" class="contact-btn">Send Message</button>
+            <div class="form-success" id="formSuccess"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer id="footer" class="footer glass-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- About/Tagline -->
+        <div class="footer-about">
+          <h3 class="footer-title">Ibrahim Muritala</h3>
+          <p class="footer-tagline">Let's work together to create a digital solution that meets your unique needs and
+            exceeds your expectations.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="bi bi-envelope"></i> <a href="adizbaba@yahoo.com">adizbaba@yahoo.com</a></li>
+            <li><i class="bi bi-telephone"></i> <a href="tel:+2349134714773">+2349134714773</a></li>
+          </ul>
+        </div>
+        <!-- Social Media -->
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="footer-social-icons">
+            <a href="#" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" target="_blank" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Ibrahim Muritala. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="assets/js/particles-config.js"></script>
+
+  <!-- Main JS Files -->
+  <script src="assets/js/main.js"></script>
+  <script src="app.js"></script>
+  <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
