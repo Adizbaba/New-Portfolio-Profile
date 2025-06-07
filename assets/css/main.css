@@ -47,20 +47,6 @@
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
-.light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #ffffff;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
-}
 
 /* Smooth scroll */
 :root {
@@ -78,7 +64,7 @@
   background-color: #fdf0c2;
 
   /* light yellow */
-  color: #000;
+  color: #021e16;
   padding: 1.2rem 2rem;
   font-size: 2rem;
   font-weight: bold;
@@ -647,8 +633,7 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #021e16;
   padding: 60px 0;
   overflow: clip;
 }
@@ -661,7 +646,7 @@ section,
   padding: 60px;
   margin-bottom: 60px;
   position: relative;
-  background: rgba(59, 85, 31, 0.15);
+  /* background: rgba(59, 85, 31, 0.15); */
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -2384,7 +2369,7 @@ section,
 .portfolio-details .swiper-button-prev:after,
 .portfolio-details .swiper-button-next:after {
   color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.15);
+  /* background-color: rgba(0, 0, 0, 0.15); */
   font-size: 24px;
   border-radius: 50%;
   width: 48px;
@@ -2397,7 +2382,7 @@ section,
 
 .portfolio-details .swiper-button-prev:hover:after,
 .portfolio-details .swiper-button-next:hover:after {
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 @media (max-width: 575px) {
@@ -2416,7 +2401,7 @@ section,
 .portfolio-details .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  /* background-color: color-mix(in srgb, var(--default-color), transparent 85%); */
   opacity: 1;
 }
 
@@ -2494,7 +2479,7 @@ section,
 .portfolio-details .portfolio-description .testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 50px;
-  border: 6px solid var(--background-color);
+  border: 6px solid #4ade80;
   float: left;
   margin: 0 10px 0 0;
 }
