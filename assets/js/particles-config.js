@@ -8,7 +8,7 @@ const particlesConfig = {
       }
     },
     color: {
-      value: "#4ade80"
+      value: "#00FF00"
     },
     shape: {
       type: "circle"
@@ -24,7 +24,7 @@ const particlesConfig = {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#4ade80",
+      color: "#00FF00",
       opacity: 0.4,
       width: 1
     },
@@ -67,7 +67,7 @@ const particlesConfig = {
 };
 
 // Initialize particles.js with the configuration
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   if (typeof particlesJS !== 'undefined') {
     particlesJS('particles-js', particlesConfig);
   }

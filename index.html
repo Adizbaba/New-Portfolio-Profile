@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -30,7 +30,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/theme.css" rel="stylesheet">
   <link href="/style.css" rel="stylesheet">
 
   <style>
@@ -63,750 +62,49 @@
         background-position: 0% 50%;
       }
     }
+  </style>
 
-    .hero {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      min-height: 100vh;
-      color: white;
-      text-align: left;
-      background: linear-gradient(to right, #021e16, #053e2d, #021e16);
-      overflow: hidden;
-    }
-
-    .hero-content {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      width: 100%;
-      gap: 2rem;
-      padding-top: 4rem;
-    }
-
-    .hero-text {
-      flex: 0 1 50%;
-      padding: 2rem;
-    }
-
-    .hero-text h1 {
-      font-size: 5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      color: white;
-    }
-
-    .hero-text .highlight {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 0.5rem 1.5rem;
-      border-radius: 4px;
-      font-size: 1.5rem;
-      margin: 1rem 0;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-      margin-top: 3rem;
-    }
-
-    .stat-item {
-      text-align: left;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #4ade80;
-    }
-
-    .stat-label {
-      font-size: 1rem;
-      opacity: 0.8;
-    }
-
-    .hero-cta {
-      display: inline-block;
-      background: rgba(0, 0, 0, 0.3);
-      color: white;
-      padding: 1.5rem 4rem;
-      border-radius: 4px;
-      text-decoration: none;
-      margin-top: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-      font-size: 1rem;
-      font-weight: 300;
-    }
-
-    .hero-cta:hover {
-      background: rgba(0, 0, 0, 0.5);
-      border-color: rgba(255, 255, 255, 0.3);
-      color: #4ade80;
-    }
-
-    .hero-image {
-      flex: 0 1 50%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-      position: relative;
-    }
-
-    .hero-image img {
-      max-width: 120%;
-      height: auto;
-      object-fit: contain;
-      margin-top: -2rem;
-      margin-right: -10%;
-    }
-
-    @media (max-width: 1200px) {
-      .hero-image img {
-        max-width: 100%;
-        margin-right: 0;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-content {
-        flex-direction: column;
-        padding-top: 2rem;
-      }
-
-      .hero-text,
-      .hero-image {
-        flex: 0 1 100%;
-      }
-
-      .hero-image {
-        justify-content: center;
-        margin-top: 2rem;
-      }
-
-      .hero-image img {
-        max-width: 80%;
-        margin: 0;
-      }
-
-      .hero-stats {
-        flex-wrap: wrap;
-        gap: 2rem;
-      }
-    }
-
-    .expertise-icons {
-      position: fixed;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .expertise-icons i {
-      font-size: 2rem;
-      color: #4ade80;
-    }
-
-    /* Nav menu styles */
-    .navmenu a {
-      color: #021e16;
-    }
-
-    .navmenu a i {
-      color: white;
-      font-size: 24px;
-      font-weight: 800;
-    }
-
-    .navmenu a:hover,
-    .navmenu a:focus,
-    .navmenu a.active {
-      color: #021e16;
-      background-color: #4ade80;
-    }
-
-    .navmenu a:hover i,
-    .navmenu a:focus i,
-    .navmenu a.active i {
-      color: #021e16;
-    }
-
-    .typed-text {
-      background: rgba(59, 85, 31, 0.15);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      padding: 15px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #021e16;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-
-    @keyframes typed-text {
+  <style>
+    @keyframes wave {
       0% {
-        background-position: 0% 50%;
+        transform: rotate(0deg);
+      }
+
+      10% {
+        transform: rotate(14deg);
+      }
+
+      20% {
+        transform: rotate(-8deg);
+      }
+
+      30% {
+        transform: rotate(14deg);
+      }
+
+      40% {
+        transform: rotate(-4deg);
       }
 
       50% {
-        background-position: 100% 50%;
+        transform: rotate(10deg);
+      }
+
+      60% {
+        transform: rotate(0deg);
       }
 
       100% {
-        background-position: 0% 50%;
+        transform: rotate(0deg);
       }
     }
 
-    /* Portfolio Section Styles */
-    .portfolio {
-      padding: 8rem 0;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(2, 30, 22, 0.1) 0%, rgba(74, 222, 128, 0.05) 100%);
-    }
-
-    .portfolio-container {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 4rem 6rem;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-      margin: 0 auto;
-      max-width: 1400px;
-    }
-
-    /* Portfolio Filters */
-    .portfolio-filters {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 3rem;
-    }
-
-    .filter-btn {
-      background: rgba(74, 222, 128, 0.1);
-      color: #4ade80;
-      border: 1px solid rgba(74, 222, 128, 0.2);
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: #4ade80;
-      color: #021e16;
-      transform: translateY(-2px);
-    }
-
-    /* Portfolio Grid */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    /* Portfolio Card */
-    .portfolio-card {
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-    }
-
-    .portfolio-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border-color: rgba(74, 222, 128, 0.2);
-    }
-
-    .portfolio-image {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 16/9;
-    }
-
-    .portfolio-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .portfolio-card:hover .portfolio-image img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(2, 30, 22, 0.7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .portfolio-card:hover .portfolio-overlay {
-      opacity: 1;
-    }
-
-    .portfolio-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .portfolio-link {
-      width: 40px;
-      height: 40px;
-      background: rgba(74, 222, 128, 0.1);
-      border: 1px solid rgba(74, 222, 128, 0.2);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #4ade80;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-    }
-
-    .portfolio-link:hover {
-      background: #4ade80;
-      color: #021e16;
-      transform: translateY(-3px);
-    }
-
-    /* Portfolio Content */
-    .portfolio-content {
-      padding: 1.5rem;
-    }
-
-    .portfolio-content h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .portfolio-content p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 1.5rem;
-    }
-
-    .portfolio-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-
-    .tech-tag {
-      background: rgba(74, 222, 128, 0.1);
-      color: #4ade80;
-      padding: 0.4rem 0.8rem;
-      border-radius: 15px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      border: 1px solid rgba(74, 222, 128, 0.2);
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .portfolio-container {
-        padding: 3rem 4rem;
-      }
-
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .portfolio {
-        padding: 6rem 0;
-      }
-
-      .portfolio-container {
-        padding: 2rem;
-        margin: 0 1rem;
-      }
-
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .portfolio-filters {
-        gap: 0.5rem;
-      }
-
-      .filter-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.8rem;
-      }
-    }
-
-    /* Services Section Styles */
-    .services {
-      padding: 8rem 0;
-      background: linear-gradient(135deg, rgba(2, 30, 22, 0.08) 0%, rgba(74, 222, 128, 0.04) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .services-container {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
-      padding: 4rem 6rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .service-card {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 2.5rem 2rem 2rem 2rem;
-      text-align: center;
-      transition: all 0.3s cubic-bezier(.4, 2, .6, 1);
-      position: relative;
-      overflow: hidden;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 0.7s forwards;
-    }
-
-    .service-card[data-aos] {
-      opacity: 1;
-      transform: none;
-      animation: none;
-    }
-
-    .service-card:hover {
-      box-shadow: 0 12px 32px 0 rgba(74, 222, 128, 0.12);
-      border-color: #4ade80;
-      transform: translateY(-8px) scale(1.03);
-    }
-
-    .service-icon {
-      font-size: 2.8rem;
-      color: #4ade80;
-      background: rgba(74, 222, 128, 0.10);
-      border-radius: 50%;
-      width: 70px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem auto;
-      box-shadow: 0 2px 8px 0 rgba(74, 222, 128, 0.08);
-      transition: background 0.3s;
-    }
-
-    .service-card:hover .service-icon {
-      background: #4ade80;
-      color: #021e16;
-    }
-
-    .service-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #4ade80;
-      letter-spacing: 0.01em;
-    }
-
-    .service-desc {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.7;
-      margin-bottom: 0;
-      font-weight: 400;
-    }
-
-    .services-cta {
-      text-align: center;
-      margin-top: 2.5rem;
-    }
-
-    .services-btn {
+    .waving-hand {
       display: inline-block;
-      background: #4ade80;
-      color: #021e16;
-      border-radius: 10px;
-      padding: 1rem 2.5rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 2px 8px 0 rgba(74, 222, 128, 0.10);
-      border: 2px solid transparent;
-      transition: all 0.3s;
-    }
-
-    .services-btn:hover {
-      background: transparent;
-      color: #4ade80;
-      border-color: #4ade80;
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 992px) {
-      .services-container {
-        padding: 3rem 2rem;
-      }
-
-      .services-grid {
-        gap: 1.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .services {
-        padding: 6rem 0;
-      }
-
-      .services-container {
-        padding: 1.5rem 0.5rem;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-      }
-
-      .service-card {
-        padding: 2rem 1rem 1.5rem 1rem;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .glass-footer {
-      background: rgba(255, 255, 255, 0.10);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(255, 255, 255, 0.10);
-      box-shadow: 0 -4px 32px 0 rgba(31, 38, 135, 0.08);
-      padding: 0;
-      margin-top: 4rem;
-      color: var(--text-main);
-    }
-
-    .footer-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 3rem 2rem 1.5rem 2rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2.5rem;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-    }
-
-    .footer-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 0.7rem;
-      color: white;
-    }
-
-    .footer-tagline {
-      font-size: 1rem;
-      color: white;
-      margin-bottom: 0;
-      line-height: 1.6;
-    }
-
-    .footer-links h4,
-    .footer-contact h4,
-    .footer-social h4 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.7rem;
-      color: white;
-    }
-
-    .footer-links ul,
-    .footer-contact ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer-links ul li,
-    .footer-contact ul li {
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-    }
-
-    .footer-links ul li a,
-    .footer-contact ul li a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer-links ul li a:hover,
-    .footer-contact ul li a:hover {
-      color: white;
-    }
-
-    .footer-contact ul li i {
-      color: white;
-      margin-right: 0.5rem;
-      font-size: 1.1rem;
-      vertical-align: middle;
-    }
-
-    .footer-social-icons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 0.2rem;
-    }
-
-    .footer-social-icons a {
-      color: white;
-      font-size: 1.5rem;
-      background: rgba(74, 222, 128, 0.10);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s, color 0.3s, transform 0.3s;
-    }
-
-    .footer-social-icons a:hover {
-      background: #4ade80;
-      color: black;
-      transform: translateY(-3px) scale(1.08);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 1.2rem;
-      font-size: 1rem;
-      color: white;
-    }
-
-    @media (max-width: 992px) {
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .footer-container {
-        padding: 2rem 0.5rem 1rem 0.5rem;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
-      }
-
-      .footer-about,
-      .footer-links,
-      .footer-contact,
-      .footer-social {
-        align-items: center;
-        justify-content: center;
-      }
-
-      .footer-social-icons {
-        justify-content: center;
-      }
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      pointer-events: auto;
-    }
-
-    .theme-toggle:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.1);
-    }
-
-    .theme-toggle i {
-      color: #fff;
-      font-size: 1.2rem;
+      animation: wave 2.5s infinite;
+      transform-origin: 70% 70%;
+      font-size: 1.2em;
+      margin-left: 5px;
     }
   </style>
 
@@ -837,11 +135,6 @@
 
   </header>
 
-  <!-- Theme Toggle Button -->
-  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
   <main class="main">
 
     <!-- Hero Section -->
@@ -849,12 +142,11 @@
       <div class="container" data-aos="zoom-out">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>I'm Ibrahim Muritala</h1>
+            <h1>Hi <span class="waving-hand">🖐️</span><br> I'm Muritala, Lagos-Based</h1>
             <div class="typing-box">
-              <span class="static-text">I'm a </span>
               <span class="typing-text" id="typing"></span>
             </div><br>
-            <a href="#contact" class="hero-cta">Get in touch →</a>
+            <a href="#contact" class="hero-cta">Get in Touch →</a>
 
             <div class="hero-stats">
               <div class="stat-item">
@@ -895,7 +187,7 @@
         <div class="about-content">
           <div class="about-text" data-aos="fade-right" data-aos-delay="100">
             <h2>About Me</h2>
-            <p>I am a passionate Full Stack Developer with expertise in creating beautiful, functional, and
+            <p>I am a passionate Intermediate Full Stack Developer with expertise in creating beautiful, functional, and
               user-centered digital experiences. With 3+ years of experience in web development, I combine technical
               expertise with creative problem-solving to deliver exceptional results.</p>
             <p>My approach to development focuses on writing clean, efficient code while ensuring optimal user
@@ -1209,9 +501,9 @@
             <div class="experience-grid">
               <div class="experience-card">
                 <div class="experience-header">
-                  <h4>Freelance Full Stack Developer</h4>
+                  <h4>Full Stack Developer</h4>
                   <div class="experience-meta">
-                    <span class="company">Self-Employed</span>
+                    <span class="company">Freelance</span>
                     <span class="duration">May 2023 - Present</span>
                   </div>
                 </div>
@@ -1510,7 +802,7 @@
         <p>Real feedback from people I've worked with</p>
       </div>
       <div class="container testimonials-container" data-aos="fade-up">
-        <div class="swiper testimonials-swiper">
+        <div class="swiper testimonials-swiper init-swiper">
           <div class="swiper-wrapper">
             <!-- Testimonial 1 -->
             <div class="swiper-slide testimonial-card" data-aos="fade-up" data-aos-delay="100">
@@ -1600,6 +892,27 @@
           <!-- Swiper Navigation -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
+          <!-- Swiper Configuration -->
+          <script type="application/json" class="swiper-config">
+            {
+              "slidesPerView": 1,
+              "spaceBetween": 0,
+              "loop": true,
+              "autoplay": {
+                "delay": 5000,
+                "disableOnInteraction": false
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true,
+                "dynamicBullets": true
+              },
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              }
+            }
+          </script>
         </div>
       </div>
     </section>
@@ -1674,7 +987,7 @@
     </section>
 
   </main>
-  <footer id="footer" class="footer glass-footer">
+  <footer id="footer" class="footer">
     <div class="footer-container">
       <div class="footer-grid">
         <!-- About/Tagline -->
@@ -1745,7 +1058,6 @@
   <!-- Main JS Files -->
   <script src="assets/js/main.js"></script>
   <script src="app.js"></script>
-  <script src="assets/js/theme.js"></script>
 </body>
 
 </html>
