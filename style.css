@@ -17,15 +17,9 @@
   --border-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Remove data-theme styles */
 [data-theme="dark"] {
-  /* Dark theme variables */
-  --bg-color: #111111;
-  --text-color: #ffffff;
-  --primary-color: #0d362b;
-  --secondary-color: #13E8E9;
-  --accent-color: #000022;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --border-color: rgba(255, 255, 255, 0.1);
+  display: none;
 }
 
 /* ---- base ---- */

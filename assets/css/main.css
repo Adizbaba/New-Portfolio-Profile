@@ -556,32 +556,11 @@ h6 {
   }
 }
 
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  pointer-events: auto;
-}
-
-.theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
+/* Remove theme-toggle styles */
+.theme-toggle,
+.theme-toggle:hover,
 .theme-toggle i {
-  color: #fff;
-  font-size: 1.2rem;
+  display: none;
 }
 
 /*--------------------------------------------------------------
