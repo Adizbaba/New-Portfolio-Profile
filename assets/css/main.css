@@ -37,7 +37,7 @@
   /* The default color of the main navmenu links */
   --nav-hover-color: #e2ecf5;
   /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff;
+  --nav-mobile-background-color: hsl(0, 0%, 100%);
   /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff;
   /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -291,7 +291,7 @@ h6 {
   margin-bottom: 8px;
   font-size: 18px;
   border-radius: 50px;
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  background: color-mix(in srgb, var(--default-color), transparent 52%);
   height: 56px;
   width: 100%;
   overflow: hidden;
@@ -342,7 +342,7 @@ h6 {
 
 /* Nav menu styles */
 .navmenu a {
-  color: #021e16;
+  color: white;
 }
 
 .navmenu a i {
@@ -398,12 +398,8 @@ h6 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
-.glass-footer {
-  background: rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: 0 -4px 32px 0 rgba(31, 38, 135, 0.08);
+.footer {
+  background: #021e16;
   padding: 0;
   margin-top: 4rem;
   color: var(--text-main);
@@ -519,6 +515,13 @@ h6 {
 }
 
 @media (max-width: 600px) {
+  .footer {
+    background: #021e16;
+    padding: 0;
+    margin-top: 4rem;
+    color: var(--text-main);
+  }
+
   .footer-container {
     padding: 2rem 0.5rem 1rem 0.5rem;
   }
@@ -542,12 +545,7 @@ h6 {
   }
 }
 
-/* Remove theme-toggle styles */
-.theme-toggle,
-.theme-toggle:hover,
-.theme-toggle i {
-  display: none;
-}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -818,6 +816,14 @@ section,
   .hero-text,
   .hero-image {
     flex: 0 1 100%;
+  }
+
+
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: white;
   }
 
   .hero-image {
@@ -1309,7 +1315,7 @@ section,
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
-  background: linear-gradient(45deg, #00FF00, #1ee6ad);
+  background: #00FF00;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2656,6 +2662,41 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  display: block;
+  margin: 0 5px 1rem 20px;
+  filter: drop-shadow(0 0 8px #00FF00);
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  height: 50px;
+  width: auto;
+  z-index: 10;
+  margin: 0;
+  filter: drop-shadow(0 0 8px #00FF00);
+}
+
+.hero.section {
+  position: relative;
 }
